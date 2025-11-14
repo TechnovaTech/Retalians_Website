@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
@@ -51,26 +52,33 @@ export default function Contact() {
     }
   }
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Get in touch with our team. We're here to help you with any questions about Retalians.
-          </p>
+      <section className="pt-32 pb-16 px-6 lg:px-8 bg-gradient-to-br from-[#fef2f2] to-[#fee2e2] relative overflow-hidden mb-16">
+        <div className="absolute inset-0 bg-red-900/5"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-red-200/20 rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 bg-red-100/15 rounded-full blur-2xl"></div>
+        </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Contact <span className="bg-gradient-to-r from-[#D7263D] to-[#F03A47] bg-clip-text text-transparent">Us</span></h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Get in touch with our team. We're here to help you with any questions about Retalians.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-2xl mx-auto">
             {/* Contact Form */}
-            <div>
-              <div className="bg-white p-8 rounded-xl shadow-sm border">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
                 
                 <form className="space-y-6" onSubmit={handleSubmit}>
@@ -167,7 +175,7 @@ export default function Contact() {
                   </button>
                 </form>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

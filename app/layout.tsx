@@ -1,11 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { CartProvider } from "@/contexts/CartContext"
+import WhatsAppChat from "@/components/whatsapp-chat"
 import "./globals.css"
-
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Retalians-website",
@@ -21,9 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className="font-sans antialiased">
         <CartProvider>
           {children}
+          <WhatsAppChat />
           <Analytics />
         </CartProvider>
       </body>

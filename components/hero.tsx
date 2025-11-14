@@ -27,7 +27,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-14 sm:pt-16 overflow-hidden">
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -45,19 +45,17 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/60 z-0" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-6"
+          className="mb-6 sm:mb-8"
         >
-          {/* <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-4">
-            🎆 Revolutionary ERP Solution
-          </div> */}
-          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight px-2">
             A <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">360°</span> Retail Solution
-            <br />by the Retailers, for the <span className="text-white">Retailers</span> 
+            <br className="hidden xs:block" />
+            <span className="xs:hidden"> </span>by the Retailers, for the <span className="text-white">Retailers</span> 
           </h1>
         </motion.div>
 
@@ -65,37 +63,26 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed"
+          className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-4"
         >
            Empowering <strong>thousands</strong> of retail business owners across India to embrace technology and streamline operations.
-          <br />One platform, infinite possibilities! 
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>One platform, infinite possibilities! 
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4"
         >
-          {/* <button
-            onClick={handlePlayVideo}
-            className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-full border border-white/30 hover:bg-white/30 hover:scale-105 transition-all duration-300 font-semibold text-lg"
-          >
-            <Play size={24} fill="white" className="group-hover:scale-110 transition-transform" />
-            {isPlaying ? "⏸️ Pause Video" : "▶️ Watch Demo"}
-          </button> */}
-          {/* <Link
-            href="/contact"
-            className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#D7263D] to-[#F03A47] text-white rounded-full hover:scale-105 hover:shadow-2xl transition-all duration-300 font-bold text-lg"
-          >
-            🚀 Get Started Free
-          </Link> */}
+          {/* Placeholder for future CTA buttons */}
         </motion.div>
       </div>
 
       {/* Scroll Wave Effect */}
       <div className="absolute bottom-0 left-0 right-0 z-5">
-        <svg className="w-full h-auto" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <svg className="w-full h-8 sm:h-12 md:h-16 lg:h-20" viewBox="0 0 1440 120" preserveAspectRatio="none">
           <path d="M0,40 Q360,0 720,40 T1440,40 L1440,120 L0,120 Z" fill="#F5F5F5" />
         </svg>
       </div>

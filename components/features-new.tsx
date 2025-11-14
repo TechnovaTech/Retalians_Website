@@ -56,23 +56,23 @@ export default function FeaturesNew() {
   ]
 
   return (
-    <section id="features" className="py-16" style={{backgroundColor: '#F5F5F5'}}>
+    <section id="features" className="py-12 sm:py-16 lg:py-20" style={{backgroundColor: '#F5F5F5'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-8 sm:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Features
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-base sm:text-lg text-gray-600 px-4">
             We're happy to help you in 10+ cities across India
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
@@ -82,16 +82,16 @@ export default function FeaturesNew() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center p-6 bg-white rounded-lg hover:shadow-md transition-shadow"
+                className="flex flex-col items-center p-4 sm:p-6 bg-white rounded-lg hover:shadow-md transition-shadow"
               >
-                <div className="w-40 h-40 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-lg mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
                   {feature.title === 'Inventory Management' ? (
                     <Image 
                       src="https://bidhee.com/uploads/work/2019-12-25-10-43-45-Inventory.svg" 
                       alt="Inventory Management" 
                       width={160} 
                       height={160} 
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-lg w-full h-full"
                     />
                   ) : feature.title === 'Customer Management' ? (
                     <Image 
@@ -99,7 +99,7 @@ export default function FeaturesNew() {
                       alt="Customer Management" 
                       width={160} 
                       height={160} 
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-lg w-full h-full"
                     />
                   ) : feature.title === 'Purchase' ? (
                     <Image 
@@ -107,7 +107,7 @@ export default function FeaturesNew() {
                       alt="Purchase" 
                       width={160} 
                       height={160} 
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-lg w-full h-full"
                     />
                   ) : feature.title === 'Bills & Invoices' ? (
                     <Image 
@@ -115,7 +115,7 @@ export default function FeaturesNew() {
                       alt="Bills & Invoices" 
                       width={128} 
                       height={128} 
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-lg w-full h-full"
                     />
                   ) : feature.title === 'Easy-to-use Platform' ? (
                     <Image 
@@ -123,7 +123,7 @@ export default function FeaturesNew() {
                       alt="Easy-to-use Platform" 
                       width={128} 
                       height={128} 
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-lg w-full h-full"
                     />
                   ) : feature.title === 'Online Payments' ? (
                     <Image 
@@ -131,7 +131,7 @@ export default function FeaturesNew() {
                       alt="Online Payments" 
                       width={128} 
                       height={128} 
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-lg w-full h-full"
                     />
                   ) : feature.title === 'Reports & Analytics' ? (
                     <Image 
@@ -139,7 +139,7 @@ export default function FeaturesNew() {
                       alt="Reports & Analytics" 
                       width={128} 
                       height={128} 
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-lg w-full h-full"
                     />
                   ) : feature.title === 'Save Time & Money' ? (
                     <Image 
@@ -147,7 +147,7 @@ export default function FeaturesNew() {
                       alt="Save Time & Money" 
                       width={128} 
                       height={128} 
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-lg w-full h-full"
                     />
                   ) : feature.title === 'HR & Staff' ? (
                     <Image 
@@ -155,21 +155,18 @@ export default function FeaturesNew() {
                       alt="HR & Staff" 
                       width={128} 
                       height={128} 
-                      className="object-cover rounded-lg"
+                      className="object-cover rounded-lg w-full h-full"
                     />
                   ) : (
                     <span className="text-gray-500 text-xs">Image</span>
                   )}
                 </div>
-                <span className="font-bold text-gray-800 text-center mb-2">{feature.title}</span>
-                <p className="text-sm text-gray-600 text-center mb-4">{feature.description}</p>
-
+                <span className="font-bold text-gray-800 text-center mb-2 text-sm sm:text-base">{feature.title}</span>
+                <p className="text-xs sm:text-sm text-gray-600 text-center mb-3 sm:mb-4 leading-relaxed">{feature.description}</p>
               </motion.div>
             )
           })}
         </div>
-
-
       </div>
     </section>
   )

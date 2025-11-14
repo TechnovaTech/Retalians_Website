@@ -68,6 +68,7 @@ export default function AdminAbout() {
               <Link href="/admin/messages" className="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-100">Messages</Link>
               <Link href="/admin/services" className="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-100">Services</Link>
               <Link href="/admin/about" className="px-4 py-2 bg-[#D7263D] text-white rounded-lg">About</Link>
+              <Link href="/admin/social-media" className="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-100">Social Media</Link>
               <Button onClick={() => { localStorage.removeItem("adminLoggedIn"); window.location.href = "/admin"; }} className="bg-red-600 hover:bg-red-700 text-white">
                 <LogOut className="w-4 h-4 mr-2" />
                 Logout

@@ -34,42 +34,42 @@ export default function FAQ() {
   }
 
   return (
-    <section className="py-16" style={{backgroundColor: '#F5F5F5'}}>
+    <section className="py-12 sm:py-16 lg:py-20" style={{backgroundColor: '#F5F5F5'}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Left Side - Title */}
           <div className="lg:sticky lg:top-8">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+              <span className="bg-gradient-to-r from-[#D7263D] to-[#F03A47] bg-clip-text text-transparent">Frequently Asked Questions</span>
+               
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
               Find answers to common questions about Retalians, ERP system, including features, setup, and best practices.
             </p>
-
           </div>
 
           {/* Right Side - Questions */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-6 border border-white/20">
-            <div className="space-y-4">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-2xl p-4 sm:p-6 border border-white/20">
+            <div className="space-y-3 sm:space-y-4">
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-md border border-gray-100 hover:border-[#D7263D]/30 transition-all duration-300"
+                  className="bg-gradient-to-br from-white to-gray-50 rounded-xl sm:rounded-2xl shadow-sm sm:shadow-md border border-gray-100 hover:border-[#D7263D]/30 transition-all duration-300"
                 >
                   <button
-                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-[#D7263D]/5 hover:to-[#F03A47]/5 transition-all duration-300 rounded-2xl"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-[#D7263D]/5 hover:to-[#F03A47]/5 transition-all duration-300 rounded-xl sm:rounded-2xl touch-target"
                     onClick={() => toggleFAQ(index)}
                   >
-                    <span className="font-medium text-gray-900">{faq.question}</span>
+                    <span className="font-medium text-gray-900 text-sm sm:text-base pr-4">{faq.question}</span>
                     {openIndex === index ? (
-                      <ChevronUp className="h-5 w-5 text-[#D7263D]" />
+                      <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-[#D7263D] flex-shrink-0" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 text-[#D7263D]" />
+                      <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-[#D7263D] flex-shrink-0" />
                     )}
                   </button>
                   {openIndex === index && (
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-600">{faq.answer}</p>
+                    <div className="px-4 sm:px-6 pb-3 sm:pb-4">
+                      <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{faq.answer}</p>
                     </div>
                   )}
                 </div>
