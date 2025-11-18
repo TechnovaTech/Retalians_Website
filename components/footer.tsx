@@ -150,10 +150,7 @@ export default function Footer() {
         <div className="py-8" style={{borderTop: '1px solid #D1D1D1'}}>
           <div className="flex justify-center items-center">
             <p className="text-sm text-center text-gray-400">
-              © 2025 All rights reserved By Retalians.<br/> Product of{" "}
-              <a href="https://www.technovatechnologies.com/" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-white transition-colors">
-                Technova Technologies
-              </a>
+              © 2025 All rights reserved By Retalians.
             </p>
           </div>
         </div>
