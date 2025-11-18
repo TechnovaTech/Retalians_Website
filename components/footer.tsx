@@ -30,7 +30,7 @@ export default function Footer() {
             <Link href="/" className="text-white font-bold text-lg mb-4 block hover:text-gray-300 transition-colors">
               Retalians
             </Link>
-            <p className="text-sm mb-4">A 360° Retail Solution by the Retailers, for the Retailers.</p>
+            <p className="text-sm mb-4">A 360° Retail Solution by the Retalians, for the Retailers.</p>
             <div className="space-y-3">
               <div className="flex items-start gap-2">
                 <Mail size={16} className="mt-1 flex-shrink-0 cursor-pointer" />
