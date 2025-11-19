@@ -27,11 +27,7 @@ export default function Hero() {
   }
 
   return (
-<<<<<<< HEAD
     <section className="relative min-h-[80vh] flex items-center justify-center pt-14 sm:pt-16 overflow-hidden">
-=======
-    <section className="relative min-h-screen flex items-center justify-center pt-14 sm:pt-16 overflow-hidden">
->>>>>>> 7eae1344c504c415068823f8ff07a56c92eec30e
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover z-0"
