@@ -3,7 +3,12 @@ import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import FeatureCard from "@/components/FeatureCard";
 import PricingCard from "@/components/PricingCard";
+<<<<<<< HEAD
 
+=======
+import TestimonialCard from "@/components/TestimonialCard";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+>>>>>>> 7eae1344c504c415068823f8ff07a56c92eec30e
 import {
   LayoutDashboard,
   Package,
@@ -223,7 +228,11 @@ export default function Page() {
         id="home"
         className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-20"
         style={{
+<<<<<<< HEAD
           background: "linear-gradient(135deg, hsl(217 91% 60% / 0.95) 0%, hsl(217 100% 75% / 0.9) 50%, hsl(217 91% 60% / 0.95) 100%)"
+=======
+          background: "linear-gradient(135deg, hsl(217 91% 60% / 0.95) 0%, hsl(217 100% 75% / 0.9) 50%, hsl(217 91% 60% / 0.95) 100%), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gMTAwIDAgTCAwIDAgMCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0i
+>>>>>>> 7eae1344c504c415068823f8ff07a56c92eec30e
         }}
       >
         <div className="container mx-auto px-4 text-center text-white relative z-10">
@@ -321,6 +330,7 @@ export default function Page() {
               Join hundreds of fashion retailers who trust our ERP solution.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg">
@@ -339,6 +349,9 @@ export default function Page() {
               </div>
             ))}
           </div>
+=======
+          <TestimonialsCarousel testimonials={testimonials} />
+>>>>>>> 7eae1344c504c415068823f8ff07a56c92eec30e
         </div>
       </section>
 
